@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="highlighted-title">
+        Only highlighted dates are currently available
+      </div>
+      <div class="calendar">
+        <div class="calendar-header">
+          <button id="prevMonth">Previous</button>
+          <h2 id="monthYear"></h2>
+          <button id="nextMonth">Next</button>
+        </div>
+        <div class="calendar-body">
+          <div class="calendar-weekdays"></div>
+          <div class="calendar-days" id="calendarDays">
+            <!-- Days will be dynamically generated here -->
+          </div>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <button id="not-interested" class="not-interested-button">
+          Not interested
+        </button>
+        <button id="continue-button" class="continue-button">Continue</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

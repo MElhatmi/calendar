@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  margin: 0;
+}
+.container {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 60px 60px 30px 60px;
+  border-radius: 15px;
+}
+.highlighted-title {
+  color: #a2a2a2;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.calendar {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 400px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: #49a1b3;
+  /* background-color: #007bff;
+  color: #fff;*/
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  /*  color: #fff;*/
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.calendar-body {
+  padding: 10px;
+}
+
+.calendar-weekdays,
+.calendar-days {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar-weekdays div,
+.calendar-days div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 40px;
+  margin: 0 2.14%;
+  border-radius: 50%;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.calendar-days .current-month-day {
+  cursor: pointer;
+}
+
+.calendar-days .current-month-day:hover {
+  background-color: #49a1b3;
+  color: #fff;
+}
+
+.prev-month-day {
+  color: #ccc;
+}
+
+.next-month-day {
+  border: none;
+  cursor: default; /* Remove pointer cursor */
+}
+
+.next-month-day:hover {
+  background-color: transparent; /* Remove hover effect */
+  color: inherit; /* Keep the original color */
+}
+.highlighted-date {
+  border: 1px solid #49a1b3;
+}
+/* button */
+button {
+  border: 0;
+  padding: 0;
+}
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-container button {
+  width: 400px;
+  padding: 15px;
+  color: white;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.not-interested-button {
+  margin-top: 40px;
+
+  background-color: #737373;
+}
+
+.continue-button {
+  margin-top: 10px;
+
+  background-color: #49a1b3;
+}
