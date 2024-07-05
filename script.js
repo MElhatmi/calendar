@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const monthYear = document.getElementById("monthYear");
   const prevMonth = document.getElementById("prevMonth");
   const nextMonth = document.getElementById("nextMonth");
+  const continueButton = document.getElementById("continue-button");
+  const errorMessage = document.getElementById("error-message");
 
   let currentDate = new Date();
+  let selectedDate = null;
 
   // Array of dates to be highlighted (assuming they are in YYYY-MM-DD format)
   const highlightedDates = ["2024-07-09", "2024-07-15", "2024-07-25"];
@@ -58,6 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
         dayDiv.classList.add("highlighted-date");
       }
 
+      // Add click event listener to select date
+      dayDiv.addEventListener("click", function () {
+        selectDate(dayDiv, dateString);
+      });
+
       calendarDays.appendChild(dayDiv);
     }
 
@@ -70,6 +78,28 @@ document.addEventListener("DOMContentLoaded", function () {
       calendarDays.appendChild(emptyDiv);
     }
   }
+
+  function selectDate(dayDiv, dateString) {
+    // Remove the selected class from the previously selected date
+    const previouslySelected = document.querySelector(".selected-date");
+    if (previouslySelected) {
+      previouslySelected.classList.remove("selected-date");
+    }
+
+    // Add the selected class to the newly selected date
+    dayDiv.classList.add("selected-date");
+    selectedDate = dateString;
+    errorMessage.textContent = ""; // Clear any existing error message
+  }
+
+  continueButton.addEventListener("click", function () {
+    if (!selectedDate) {
+      errorMessage.textContent = "Please select a date before continuing.";
+    } else {
+      // Proceed with the selected date
+      console.log("Selected date:", selectedDate);
+    }
+  });
 
   prevMonth.addEventListener("click", function () {
     currentDate.setMonth(currentDate.getMonth() - 1);
