@@ -192,3 +192,12 @@ button::-moz-focus-inner {
     height: 380px;
   }
 }
+
+@media (max-height: 667px) {
+  .calendar-days div {
+    margin: 1vh 2.14%;
+  }
+  .calender-container {
+    height: 50vh;
+  }
+}
