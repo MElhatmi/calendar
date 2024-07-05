@@ -4,7 +4,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-
   margin: 0;
 }
 .container {
@@ -29,8 +28,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  color: #49a1b3;
+  padding: 10px 40px;
+  color: #00a4b6;
   /* background-color: #007bff;
   color: #fff;*/
 }
@@ -64,11 +63,12 @@ body {
   margin: 3px 2.14%;
   border-radius: 50%;
   box-sizing: border-box;
-  color: #888888;
+  color: #d6d6d6;
 }
 
 .calendar-days .current-month-day {
   cursor: pointer;
+  color: #454545;
 }
 
 .calendar-days .current-month-day:hover {
@@ -90,7 +90,8 @@ body {
   color: inherit; /* Keep the original color */
 }
 .highlighted-date {
-  border: 1px solid #49a1b3;
+  border: 1px solid #00a4b6;
+  background-color: #d9fbff;
 }
 /* button */
 button {
@@ -117,12 +118,10 @@ button::-moz-focus-inner {
 
 .not-interested-button {
   margin-top: 40px;
-
   background-color: #737373;
 }
 
 .continue-button {
   margin-top: 10px;
-
-  background-color: #49a1b3;
+  background-color: #00a4b6;
 }
