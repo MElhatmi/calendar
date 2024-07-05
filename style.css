@@ -62,7 +62,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
+  padding: 20px 40px 10px 40px;
   color: #00a4b6;
   font-weight: bold;
   font-size: 20px;
@@ -130,6 +130,9 @@ body {
   background-color: #d9fbff;
   color: #00a4b6 !important;
 }
+.highlighted-date:hover {
+  color: white !important;
+}
 /* button */
 button {
   border: 0;
@@ -174,7 +177,7 @@ button::-moz-focus-inner {
   }
 
   .calendar-header {
-    padding: 20px;
+    margin-top: 30px;
     font-size: 2.2rem;
   }
 
@@ -187,7 +190,7 @@ button::-moz-focus-inner {
     font-size: 2rem;
   }
   .arrow {
-    width: 27.18px;
+    width: 22px;
   }
   .calendar-header {
     padding: 10px 80px;
@@ -206,5 +209,8 @@ button::-moz-focus-inner {
   }
   .arrow {
     width: 8px;
+  }
+  .buttons-container button {
+    font-size: 16px;
   }
 }
