@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
       0
     ).getDate();
 
-    monthYear.textContent = `${date.toLocaleString("default", {
+    monthYear.textContent = date.toLocaleString("default", {
       month: "long",
-    })} ${currentYear}`;
+    });
 
     // Adjust first day to start from Saturday (shift to Saturday-based week)
     const adjustedFirstDay = (firstDayOfMonth + 1) % 7;
