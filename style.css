@@ -46,6 +46,12 @@ body {
 .direct-container {
   width: 80%;
 }
+.desired-date {
+  font-size: 22px;
+  font-weight: 600;
+  color: #00a4b6;
+  margin-bottom: 10px;
+}
 .highlighted-title {
   color: #454545;
   font-size: 20px;
@@ -57,7 +63,9 @@ body {
   border-radius: 15px;
   overflow: hidden;
 }
-
+.calender-container {
+  height: 330px;
+}
 .calendar-header {
   display: flex;
   justify-content: space-between;
@@ -79,6 +87,7 @@ body {
 
 .calendar-body {
   padding: 10px;
+  padding-bottom: 0px;
 }
 
 .calendar-weekdays,
@@ -93,10 +102,8 @@ body {
   justify-content: center;
   align-items: center;
   width: 10%;
-  font-weight: 600;
-  /*height: 40px;*/
   aspect-ratio: 1 / 1;
-  margin: 3px 2.14%;
+  margin: 10px 2.14%;
   border-radius: 50%;
   box-sizing: border-box;
   color: #d6d6d6;
@@ -127,8 +134,8 @@ body {
 }
 .highlighted-date {
   border: 1px solid #00a4b6;
-  background-color: #d9fbff;
   color: #00a4b6 !important;
+  font-weight: 600;
 }
 .highlighted-date:hover {
   color: white !important;
@@ -165,6 +172,11 @@ button::-moz-focus-inner {
 .continue-button {
   margin-top: 10px;
   background-color: #00a4b6;
+}
+
+.next-month-day {
+  height: 0;
+  margin-bottom: 0;
 }
 @media (min-width: 2560px) {
   .container {
@@ -212,5 +224,10 @@ button::-moz-focus-inner {
   }
   .buttons-container button {
     font-size: 16px;
+  }
+  .calendar-weekdays div,
+  .calendar-days div {
+    font-size: 16px;
+    margin: 5px 2.14%;
   }
 }

@@ -9,26 +9,30 @@
   <body>
     <div class="container">
       <div class="direct-container">
+        <div class="desired-date">Select a desired date</div>
         <div class="highlighted-title">
           Only highlighted dates are currently available
         </div>
-        <div class="calendar">
-          <div class="calendar-header">
-            <button id="prevMonth">
-              <img class="arrow" src="left arrow.svg" width="13.59" alt="" />
-            </button>
-            <div id="monthYear"></div>
-            <button id="nextMonth">
-              <img class="arrow" src="right arrow.svg" width="13.59" alt="" />
-            </button>
-          </div>
-          <div class="calendar-body">
-            <div class="calendar-weekdays"></div>
-            <div class="calendar-days" id="calendarDays">
-              <!-- Days will be dynamically generated here -->
+        <div class="calender-container">
+          <div class="calendar">
+            <div class="calendar-header">
+              <button id="prevMonth">
+                <img class="arrow" src="left arrow.svg" width="13.59" alt="" />
+              </button>
+              <div id="monthYear"></div>
+              <button id="nextMonth">
+                <img class="arrow" src="right arrow.svg" width="13.59" alt="" />
+              </button>
+            </div>
+            <div class="calendar-body">
+              <div class="calendar-weekdays"></div>
+              <div class="calendar-days" id="calendarDays">
+                <!-- Days will be dynamically generated here -->
+              </div>
             </div>
           </div>
         </div>
+
         <div class="buttons-container">
           <button id="not-interested" class="not-interested-button">
             Not interested
