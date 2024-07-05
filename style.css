@@ -44,7 +44,7 @@ body {
   padding-bottom: 50px;
 }
 .direct-container {
-  width: 80%;
+  width: 90%;
 }
 .desired-date {
   font-size: 20px;
@@ -66,7 +66,7 @@ body {
 }
 
 .calender-container {
-  height: 370px;
+  height: 400px;
 }
 
 .calendar-header {
@@ -118,10 +118,11 @@ body {
 .calendar-days .current-month-day:hover,
 .selected-date {
   background-color: #49a1b3;
-  color: #fff;
+  color: #fff !important;
 }
 
-.prev-month-day {
+.prev-month-day,
+.next-month-day {
   color: #d6d6d6;
 }
 
@@ -175,17 +176,19 @@ button::-moz-focus-inner {
   margin-top: 10px;
   background-color: #00a4b6;
 }
-.calendar-days .next-month-day {
+/*.calendar-days .next-month-day {
   display: none;
   margin-bottom: 0;
 }
+*/
 .error-message {
   margin-bottom: 10px;
   color: red;
   height: 30px;
 }
+
 @media (max-width: 395px) {
-  .direct-container {
-    width: 90%;
+  .calender-container {
+    height: 380px;
   }
 }

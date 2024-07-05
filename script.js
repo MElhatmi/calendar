@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 1; i <= nextMonthDays; i++) {
       const emptyDiv = document.createElement("div");
       emptyDiv.classList.add("calendar-day", "next-month-day");
+      emptyDiv.textContent = i;
       calendarDays.appendChild(emptyDiv);
     }
   }
