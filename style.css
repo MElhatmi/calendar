@@ -1,5 +1,33 @@
+@font-face {
+  font-family: "GreycliffCF";
+  src: url("greycliff/GreycliffCF-Regular.woff2") format("woff2"),
+    url("greycliff/GreycliffCF-Regular.woff") format("woff"),
+    url("fonts/GreycliffCF-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GreycliffCF";
+  src: url("greycliff/GreycliffCF-DemiBold.woff2") format("woff2"),
+    url("greycliff/GreycliffCF-DemiBold.woff") format("woff"),
+    url("greycliff/GreycliffCF-DemiBold.ttf") format("truetype");
+  font-weight: 600; /* DemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GreycliffCF";
+  src: url("greycliff/GreycliffCF-Bold.woff2") format("woff2"),
+    url("greycliff/GreycliffCF-Bold.woff") format("woff"),
+    url("greycliff/GreycliffCF-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* h reset */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "GreycliffCF", Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,19 +37,25 @@ body {
 .container {
   text-align: center;
   background-color: #f4f4f4;
-  padding: 60px 60px 30px 60px;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  width: min(520px, 90%);
+  padding: 60px 0 30px 0;
+}
+.direct-container {
+  width: 80%;
 }
 .highlighted-title {
-  color: #a2a2a2;
+  color: #454545;
   font-size: 20px;
   margin-bottom: 20px;
+  font-weight: normal;
 }
 .calendar {
   background-color: #fff;
   border-radius: 15px;
   overflow: hidden;
-  width: 400px;
 }
 
 .calendar-header {
@@ -30,6 +64,8 @@ body {
   align-items: center;
   padding: 10px 40px;
   color: #00a4b6;
+  font-weight: bold;
+  font-size: 20px;
   /* background-color: #007bff;
   color: #fff;*/
 }
@@ -38,7 +74,6 @@ body {
   background: none;
   border: none;
   /*  color: #fff;*/
-  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -58,6 +93,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 10%;
+  font-weight: 600;
   /*height: 40px;*/
   aspect-ratio: 1 / 1;
   margin: 3px 2.14%;
@@ -108,12 +144,13 @@ button::-moz-focus-inner {
 }
 
 .buttons-container button {
-  width: 400px;
+  width: 100%;
   padding: 15px;
   color: white;
   border-radius: 15px;
   font-size: 18px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .not-interested-button {
@@ -124,4 +161,49 @@ button::-moz-focus-inner {
 .continue-button {
   margin-top: 10px;
   background-color: #00a4b6;
+}
+@media (min-width: 2560px) {
+  .container {
+    width: 920px;
+    padding: 120px 0 60px 0;
+  }
+  .highlighted-title {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+
+  .calendar-header {
+    padding: 20px;
+    font-size: 2.2rem;
+  }
+
+  .buttons-container button {
+    padding: 30px;
+    font-size: 36px;
+  }
+  .calendar-weekdays div,
+  .calendar-days div {
+    font-size: 2rem;
+  }
+  .arrow {
+    width: 27.18px;
+  }
+  .calendar-header {
+    padding: 10px 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlighted-title {
+    font-size: 3.6vw;
+  }
+  .direct-container {
+    width: 85%;
+  }
+  .calendar-header {
+    font-size: 3.75vw;
+  }
+  .arrow {
+    width: 8px;
+  }
 }
