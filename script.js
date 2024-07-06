@@ -59,12 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
         .padStart(2, "0")}-${i.toString().padStart(2, "0")}`;
       if (highlightedDates.includes(dateString)) {
         dayDiv.classList.add("highlighted-date");
-      }
 
-      // Add click event listener to select date
-      dayDiv.addEventListener("click", function () {
-        selectDate(dayDiv, dateString);
-      });
+        // Add click event listener to select date if it's highlighted
+        dayDiv.addEventListener("click", function () {
+          selectDate(dayDiv, dateString);
+        });
+      }
 
       calendarDays.appendChild(dayDiv);
     }
@@ -81,6 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function selectDate(dayDiv, dateString) {
+    // Ensure the clicked date is a highlighted date
+    if (!dayDiv.classList.contains("highlighted-date")) {
+      return;
+    }
+
     // Remove the selected class from the previously selected date
     const previouslySelected = document.querySelector(".selected-date");
     if (previouslySelected) {
@@ -95,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   continueButton.addEventListener("click", function () {
     if (!selectedDate) {
-      errorMessage.textContent = "Please select a date before continuing.";
+      errorMessage.textContent = "Please select a highlighted date.";
     } else {
       // Proceed with the selected date
       console.log("Selected date:", selectedDate);
