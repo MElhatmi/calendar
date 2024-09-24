@@ -38,7 +38,7 @@ body {
   text-align: center;
   background-color: #f4f4f4;
   border-radius: 15px;
-  width: min(400px, 90%);
+  width: 400px;
   display: flex;
   justify-content: center;
   padding-bottom: 50px;
@@ -63,10 +63,6 @@ body {
   background-color: #fff;
   border-radius: 15px;
   overflow: hidden;
-}
-
-.calender-container {
-  margin-bottom: 15px;
 }
 
 .calendar-header {
@@ -98,18 +94,18 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
 .calendar-weekdays div,
 .calendar-days div {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10%;
+  width: 30px;
   aspect-ratio: 1 / 1;
-  margin: 10px 2.14%;
+  margin: 10px 8px;
   border-radius: 50%;
-  box-sizing: border-box;
+  padding: 1px;
 }
+
 .calendar-weekdays div {
   font-weight: 600;
 }
@@ -135,7 +131,6 @@ body {
 }
 
 .highlighted-date {
-  text-align: center;
   border: 1px solid #00a4b6;
   color: #00a4b6;
   font-weight: 600;
@@ -193,5 +188,16 @@ button::-moz-focus-inner {
   .calendar-weekdays div,
   .calendar-days div {
     margin: 1vh 2.14%;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+  }
+  .calendar-weekdays div,
+  .calendar-days div {
+    width: 9.3%;
+    margin: 10px 2%;
   }
 }
