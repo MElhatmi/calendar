@@ -66,7 +66,7 @@ body {
 }
 
 .calender-container {
-  height: 455px;
+  margin-bottom: 15px;
 }
 
 .calendar-header {
@@ -135,6 +135,7 @@ body {
 }
 
 .highlighted-date {
+  text-align: center;
   border: 1px solid #00a4b6;
   color: #00a4b6;
   font-weight: 600;
@@ -188,18 +189,9 @@ button::-moz-focus-inner {
   height: 30px;
 }
 
-@media (max-width: 395px) {
-  .calender-container {
-    height: 380px;
-  }
-}
-
 @media (max-height: 667px) {
   .calendar-weekdays div,
   .calendar-days div {
     margin: 1vh 2.14%;
-  }
-  .calender-container {
-    height: 50vh;
   }
 }
