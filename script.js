@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Adjust first day to start from Saturday (shift to Saturday-based week)
-    const adjustedFirstDay = (firstDayOfMonth + 1) % 7;
+    const adjustedFirstDay = firstDayOfMonth % 7;
 
     for (let i = adjustedFirstDay - 1; i >= 0; i--) {
       const prevDayDiv = document.createElement("div");
